@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Clc_AppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tbl_BP">
+          <Key>
+            <PropertyRef Name="BP_Id" />
+          </Key>
+          <Property Name="BP_Id" Type="int" Nullable="false" />
+          <Property Name="Systolic" Type="int" />
+          <Property Name="Diastolic" Type="varchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
+        <EntityType Name="Tbl_Disease">
+          <Key>
+            <PropertyRef Name="Disease_Id" />
+          </Key>
+          <Property Name="Disease_Id" Type="int" Nullable="false" />
+          <Property Name="Disease_Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Medicine">
+          <Key>
+            <PropertyRef Name="Medicine_Id" />
+          </Key>
+          <Property Name="Medicine_Id" Type="int" Nullable="false" />
+          <Property Name="Medicine_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Medicine_Dosage" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Patient">
+          <Key>
+            <PropertyRef Name="patient_Id" />
+          </Key>
+          <Property Name="patient_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="full_Name" Type="varchar" MaxLength="50" />
+          <Property Name="age" Type="int" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="date_Of_Brith" Type="date" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="address_Id" Type="int" />
+          <Property Name="age_Updated_at" Type="datetime" />
+          <Property Name="device_Created_at" Type="datetime" />
+          <Property Name="device_Updated_at" Type="datetime" />
+          <Property Name="test_data" Type="bit" />
+          <Property Name="registration_facility_id" Type="int" />
+          <Property Name="registration_User_Id" Type="int" />
+          <Property Name="contacted_By_Counsellor" Type="bit" />
+          <Property Name="could_Not_Contact_Reason" Type="varchar" MaxLength="50" />
+          <Property Name="recorded_at" Type="datetime" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="is_Active" Type="bit" />
+          <Property Name="is_Deleted" Type="bit" />
+          <Property Name="created_On" Type="datetime" />
+          <Property Name="created_By" Type="varchar" MaxLength="50" />
+          <Property Name="updated_On" Type="datetime" />
+          <Property Name="updated_By" Type="varchar" MaxLength="50" />
+          <Property Name="phone_No" Type="varchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="int" Nullable="false" />
+          <Property Name="Role_Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Users">
+          <Key>
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Phone_No" Type="varchar" MaxLength="50" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="District" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Clc_AppModelStoreContainer">
+          <EntitySet Name="Tbl_BP" EntityType="Self.Tbl_BP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Disease" EntityType="Self.Tbl_Disease" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Medicine" EntityType="Self.Tbl_Medicine" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Patient" EntityType="Self.Tbl_Patient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Role" EntityType="Self.Tbl_Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Users" EntityType="Self.Tbl_Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Clc_AppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tbl_BP">
+          <Key>
+            <PropertyRef Name="BP_Id" />
+          </Key>
+          <Property Name="BP_Id" Type="Int32" Nullable="false" />
+          <Property Name="Systolic" Type="Int32" />
+          <Property Name="Diastolic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Tbl_Disease">
+          <Key>
+            <PropertyRef Name="Disease_Id" />
+          </Key>
+          <Property Name="Disease_Id" Type="Int32" Nullable="false" />
+          <Property Name="Disease_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Medicine">
+          <Key>
+            <PropertyRef Name="Medicine_Id" />
+          </Key>
+          <Property Name="Medicine_Id" Type="Int32" Nullable="false" />
+          <Property Name="Medicine_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Medicine_Dosage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Patient">
+          <Key>
+            <PropertyRef Name="patient_Id" />
+          </Key>
+          <Property Name="patient_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date_Of_Brith" Type="DateTime" Precision="0" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address_Id" Type="Int32" />
+          <Property Name="age_Updated_at" Type="DateTime" Precision="3" />
+          <Property Name="device_Created_at" Type="DateTime" Precision="3" />
+          <Property Name="device_Updated_at" Type="DateTime" Precision="3" />
+          <Property Name="test_data" Type="Boolean" />
+          <Property Name="registration_facility_id" Type="Int32" />
+          <Property Name="registration_User_Id" Type="Int32" />
+          <Property Name="contacted_By_Counsellor" Type="Boolean" />
+          <Property Name="could_Not_Contact_Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="recorded_at" Type="DateTime" Precision="3" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="is_Active" Type="Boolean" />
+          <Property Name="is_Deleted" Type="Boolean" />
+          <Property Name="created_On" Type="DateTime" Precision="3" />
+          <Property Name="created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="updated_On" Type="DateTime" Precision="3" />
+          <Property Name="updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Role">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="Int32" Nullable="false" />
+          <Property Name="Role_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Users">
+          <Key>
+            <PropertyRef Name="User_Id" />
+          </Key>
+          <Property Name="User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Clc_AppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_BP" EntityType="Self.Tbl_BP" />
+          <EntitySet Name="Tbl_Disease" EntityType="Self.Tbl_Disease" />
+          <EntitySet Name="Tbl_Medicine" EntityType="Self.Tbl_Medicine" />
+          <EntitySet Name="Tbl_Patient" EntityType="Self.Tbl_Patient" />
+          <EntitySet Name="Tbl_Role" EntityType="Self.Tbl_Role" />
+          <EntitySet Name="Tbl_Users" EntityType="Self.Tbl_Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Clc_AppModelStoreContainer" CdmEntityContainer="Clc_AppEntities">
+          <EntitySetMapping Name="Tbl_BP">
+            <EntityTypeMapping TypeName="Clc_AppModel.Tbl_BP">
+              <MappingFragment StoreEntitySet="Tbl_BP">
+                <ScalarProperty Name="BP_Id" ColumnName="BP_Id" />
+                <ScalarProperty Name="Systolic" ColumnName="Systolic" />
+                <ScalarProperty Name="Diastolic" ColumnName="Diastolic" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Disease">
+            <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Disease">
+              <MappingFragment StoreEntitySet="Tbl_Disease">
+                <ScalarProperty Name="Disease_Id" ColumnName="Disease_Id" />
+                <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Medicine">
+            <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Medicine">
+              <MappingFragment StoreEntitySet="Tbl_Medicine">
+                <ScalarProperty Name="Medicine_Id" ColumnName="Medicine_Id" />
+                <ScalarProperty Name="Medicine_Name" ColumnName="Medicine_Name" />
+                <ScalarProperty Name="Medicine_Dosage" ColumnName="Medicine_Dosage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Patient">
+            <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Patient">
+              <MappingFragment StoreEntitySet="Tbl_Patient">
+                <ScalarProperty Name="patient_Id" ColumnName="patient_Id" />
+                <ScalarProperty Name="full_Name" ColumnName="full_Name" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="date_Of_Brith" ColumnName="date_Of_Brith" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="address_Id" ColumnName="address_Id" />
+                <ScalarProperty Name="age_Updated_at" ColumnName="age_Updated_at" />
+                <ScalarProperty Name="device_Created_at" ColumnName="device_Created_at" />
+                <ScalarProperty Name="device_Updated_at" ColumnName="device_Updated_at" />
+                <ScalarProperty Name="test_data" ColumnName="test_data" />
+                <ScalarProperty Name="registration_facility_id" ColumnName="registration_facility_id" />
+                <ScalarProperty Name="registration_User_Id" ColumnName="registration_User_Id" />
+                <ScalarProperty Name="contacted_By_Counsellor" ColumnName="contacted_By_Counsellor" />
+                <ScalarProperty Name="could_Not_Contact_Reason" ColumnName="could_Not_Contact_Reason" />
+                <ScalarProperty Name="recorded_at" ColumnName="recorded_at" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="is_Active" ColumnName="is_Active" />
+                <ScalarProperty Name="is_Deleted" ColumnName="is_Deleted" />
+                <ScalarProperty Name="created_On" ColumnName="created_On" />
+                <ScalarProperty Name="created_By" ColumnName="created_By" />
+                <ScalarProperty Name="updated_On" ColumnName="updated_On" />
+                <ScalarProperty Name="updated_By" ColumnName="updated_By" />
+                <ScalarProperty Name="phone_No" ColumnName="phone_No" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Role">
+            <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Role">
+              <MappingFragment StoreEntitySet="Tbl_Role">
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Users">
+            <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Users">
+              <MappingFragment StoreEntitySet="Tbl_Users">
+                <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

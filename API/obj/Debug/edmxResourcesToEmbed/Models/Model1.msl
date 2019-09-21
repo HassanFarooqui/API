@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Clc_AppModelStoreContainer" CdmEntityContainer="Clc_AppEntities">
+    <EntitySetMapping Name="Tbl_BP">
+      <EntityTypeMapping TypeName="Clc_AppModel.Tbl_BP">
+        <MappingFragment StoreEntitySet="Tbl_BP">
+          <ScalarProperty Name="BP_Id" ColumnName="BP_Id" />
+          <ScalarProperty Name="Systolic" ColumnName="Systolic" />
+          <ScalarProperty Name="Diastolic" ColumnName="Diastolic" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Disease">
+      <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Disease">
+        <MappingFragment StoreEntitySet="Tbl_Disease">
+          <ScalarProperty Name="Disease_Id" ColumnName="Disease_Id" />
+          <ScalarProperty Name="Disease_Name" ColumnName="Disease_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Medicine">
+      <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Medicine">
+        <MappingFragment StoreEntitySet="Tbl_Medicine">
+          <ScalarProperty Name="Medicine_Id" ColumnName="Medicine_Id" />
+          <ScalarProperty Name="Medicine_Name" ColumnName="Medicine_Name" />
+          <ScalarProperty Name="Medicine_Dosage" ColumnName="Medicine_Dosage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Patient">
+      <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Patient">
+        <MappingFragment StoreEntitySet="Tbl_Patient">
+          <ScalarProperty Name="patient_Id" ColumnName="patient_Id" />
+          <ScalarProperty Name="full_Name" ColumnName="full_Name" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="date_Of_Brith" ColumnName="date_Of_Brith" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="address_Id" ColumnName="address_Id" />
+          <ScalarProperty Name="age_Updated_at" ColumnName="age_Updated_at" />
+          <ScalarProperty Name="device_Created_at" ColumnName="device_Created_at" />
+          <ScalarProperty Name="device_Updated_at" ColumnName="device_Updated_at" />
+          <ScalarProperty Name="test_data" ColumnName="test_data" />
+          <ScalarProperty Name="registration_facility_id" ColumnName="registration_facility_id" />
+          <ScalarProperty Name="registration_User_Id" ColumnName="registration_User_Id" />
+          <ScalarProperty Name="contacted_By_Counsellor" ColumnName="contacted_By_Counsellor" />
+          <ScalarProperty Name="could_Not_Contact_Reason" ColumnName="could_Not_Contact_Reason" />
+          <ScalarProperty Name="recorded_at" ColumnName="recorded_at" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="is_Active" ColumnName="is_Active" />
+          <ScalarProperty Name="is_Deleted" ColumnName="is_Deleted" />
+          <ScalarProperty Name="created_On" ColumnName="created_On" />
+          <ScalarProperty Name="created_By" ColumnName="created_By" />
+          <ScalarProperty Name="updated_On" ColumnName="updated_On" />
+          <ScalarProperty Name="updated_By" ColumnName="updated_By" />
+          <ScalarProperty Name="phone_No" ColumnName="phone_No" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Role">
+      <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Role">
+        <MappingFragment StoreEntitySet="Tbl_Role">
+          <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+          <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Users">
+      <EntityTypeMapping TypeName="Clc_AppModel.Tbl_Users">
+        <MappingFragment StoreEntitySet="Tbl_Users">
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Clc_AppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tbl_BP">
+    <Key>
+      <PropertyRef Name="BP_Id" />
+    </Key>
+    <Property Name="BP_Id" Type="Int32" Nullable="false" />
+    <Property Name="Systolic" Type="Int32" />
+    <Property Name="Diastolic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tbl_Disease">
+    <Key>
+      <PropertyRef Name="Disease_Id" />
+    </Key>
+    <Property Name="Disease_Id" Type="Int32" Nullable="false" />
+    <Property Name="Disease_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Medicine">
+    <Key>
+      <PropertyRef Name="Medicine_Id" />
+    </Key>
+    <Property Name="Medicine_Id" Type="Int32" Nullable="false" />
+    <Property Name="Medicine_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Medicine_Dosage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Patient">
+    <Key>
+      <PropertyRef Name="patient_Id" />
+    </Key>
+    <Property Name="patient_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_Of_Brith" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="address_Id" Type="Int32" />
+    <Property Name="age_Updated_at" Type="DateTime" Precision="3" />
+    <Property Name="device_Created_at" Type="DateTime" Precision="3" />
+    <Property Name="device_Updated_at" Type="DateTime" Precision="3" />
+    <Property Name="test_data" Type="Boolean" />
+    <Property Name="registration_facility_id" Type="Int32" />
+    <Property Name="registration_User_Id" Type="Int32" />
+    <Property Name="contacted_By_Counsellor" Type="Boolean" />
+    <Property Name="could_Not_Contact_Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="recorded_at" Type="DateTime" Precision="3" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="is_Active" Type="Boolean" />
+    <Property Name="is_Deleted" Type="Boolean" />
+    <Property Name="created_On" Type="DateTime" Precision="3" />
+    <Property Name="created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="updated_On" Type="DateTime" Precision="3" />
+    <Property Name="updated_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Role">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="Int32" Nullable="false" />
+    <Property Name="Role_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Users">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Clc_AppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_BP" EntityType="Self.Tbl_BP" />
+    <EntitySet Name="Tbl_Disease" EntityType="Self.Tbl_Disease" />
+    <EntitySet Name="Tbl_Medicine" EntityType="Self.Tbl_Medicine" />
+    <EntitySet Name="Tbl_Patient" EntityType="Self.Tbl_Patient" />
+    <EntitySet Name="Tbl_Role" EntityType="Self.Tbl_Role" />
+    <EntitySet Name="Tbl_Users" EntityType="Self.Tbl_Users" />
+  </EntityContainer>
+</Schema>

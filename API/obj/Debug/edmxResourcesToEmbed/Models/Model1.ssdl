@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Clc_AppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tbl_BP">
+    <Key>
+      <PropertyRef Name="BP_Id" />
+    </Key>
+    <Property Name="BP_Id" Type="int" Nullable="false" />
+    <Property Name="Systolic" Type="int" />
+    <Property Name="Diastolic" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="Tbl_Disease">
+    <Key>
+      <PropertyRef Name="Disease_Id" />
+    </Key>
+    <Property Name="Disease_Id" Type="int" Nullable="false" />
+    <Property Name="Disease_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_Medicine">
+    <Key>
+      <PropertyRef Name="Medicine_Id" />
+    </Key>
+    <Property Name="Medicine_Id" Type="int" Nullable="false" />
+    <Property Name="Medicine_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Medicine_Dosage" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_Patient">
+    <Key>
+      <PropertyRef Name="patient_Id" />
+    </Key>
+    <Property Name="patient_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="full_Name" Type="varchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="gender" Type="varchar" MaxLength="50" />
+    <Property Name="date_Of_Brith" Type="date" />
+    <Property Name="status" Type="varchar" MaxLength="50" />
+    <Property Name="address_Id" Type="int" />
+    <Property Name="age_Updated_at" Type="datetime" />
+    <Property Name="device_Created_at" Type="datetime" />
+    <Property Name="device_Updated_at" Type="datetime" />
+    <Property Name="test_data" Type="bit" />
+    <Property Name="registration_facility_id" Type="int" />
+    <Property Name="registration_User_Id" Type="int" />
+    <Property Name="contacted_By_Counsellor" Type="bit" />
+    <Property Name="could_Not_Contact_Reason" Type="varchar" MaxLength="50" />
+    <Property Name="recorded_at" Type="datetime" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="is_Active" Type="bit" />
+    <Property Name="is_Deleted" Type="bit" />
+    <Property Name="created_On" Type="datetime" />
+    <Property Name="created_By" Type="varchar" MaxLength="50" />
+    <Property Name="updated_On" Type="datetime" />
+    <Property Name="updated_By" Type="varchar" MaxLength="50" />
+    <Property Name="phone_No" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_Role">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="int" Nullable="false" />
+    <Property Name="Role_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_Users">
+    <Key>
+      <PropertyRef Name="User_Id" />
+    </Key>
+    <Property Name="User_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Phone_No" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="District" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Clc_AppModelStoreContainer">
+    <EntitySet Name="Tbl_BP" EntityType="Self.Tbl_BP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Disease" EntityType="Self.Tbl_Disease" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Medicine" EntityType="Self.Tbl_Medicine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Patient" EntityType="Self.Tbl_Patient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Role" EntityType="Self.Tbl_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Users" EntityType="Self.Tbl_Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
